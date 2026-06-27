@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: "📖 Support & Bug Reporting Guide"
-    url: "https://github.com/YOUR_USERNAME/Miro-Support/discussions/categories/guides"
+    url: "https://github.com/advancefeescam/Miro-Support/discussions/categories/guides"
     about: "Read this first before submitting a bug! Learn how to grab logs and what we expect."
   - name: "💬 General Chat & Questions"
-    url: "https://github.com/YOUR_USERNAME/Miro-Support/discussions"
+    url: "https://github.com/advancefeescam/Miro-Support/discussions"
     about: "If it's not a verified bug, ask your questions or chat here instead."
