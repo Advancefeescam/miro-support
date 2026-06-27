@@ -1,61 +1,71 @@
 name: 🐛 Bug Report
-description: Report an issue for LineageOS or Lunaris AOSP on POCO F7 Ultra (miro)
+description: Report a bug for LineageOS or Lunaris AOSP v1.0 (miro)
 title: "[BUG]: "
-labels: ["bug", "triage"]
+labels: ["bug", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report! Please provide as much detail as possible so we can look into it.
+        ## 🚨 POCO F7 Ultra (miro) Bug Report
+        Thank you for helping improve the ROMs! Please fill out this form as accurately as possible. 
+        *Make sure you are on the latest v1.0 Initial Release before reporting.*
+  
   - type: dropdown
     id: rom_type
     attributes:
       label: 💿 Which ROM are you using?
-      description: Please select the specific ROM you have installed on your miro device.
+      description: Select the specific ROM where you encountered the bug.
       options:
-        - "Lunaris AOSP (Android 16 QPR2)"
-        - "LineageOS (Official/Unofficial Base)"
+        - "Lunaris AOSP — v1.0 Initial Unofficial (Android 16 QPR2)"
+        - "LineageOS — v1.0 Initial Unofficial (Android 16 Base)"
     validations:
       required: true
-  - type: input
-    id: rom_version
-    attributes:
-      label: 📅 Build Date / Version
-      description: Enter the build date or version string (e.g., 2026-06-25 release).
-      placeholder: "e.g., v1.0 Initial / June 2026 Security Patch"
-    validations:
-      required: true
+
   - type: textarea
     id: bug_description
     attributes:
-      label: 🚨 Description of the Bug
-      description: A clear and concise description of what the bug is and when it happens.
+      label: 🔍 What is the bug?
+      description: Provide a clear and concise description of the issue.
+      placeholder: "e.g., The system profiles crash when turning on Bluetooth..."
     validations:
       required: true
+
   - type: textarea
     id: steps_to_reproduce
     attributes:
       label: 🔄 Steps to Reproduce
-      description: Tell us exactly how to trigger the bug.
+      description: Explain exactly how to trigger this bug step-by-step.
       placeholder: |
-        1. Open App '...'
-        2. Toggle option '....'
-        3. App crashes with error '....'
+        1. Open Settings -> Sound
+        2. Tap on Dolby Atmos
+        3. The app instantly closes
     validations:
       required: true
+
   - type: textarea
     id: logs
     attributes:
-      label: 📋 Logcat / Crash Logs
-      description: Please drag and drop your MatLOG / Logcat file here, or paste the relevant log lines inside the code block.
+      label: 📋 Logcat / Crash Logs (Recommended)
+      description: Please drag and drop your MatLOG / Logcat file here, or paste the relevant crash logs inside the code block.
       value: |
         ```text
         Paste log lines here if applicable
         ```
     validations:
       required: false
+
   - type: textarea
     id: screenshots
     attributes:
-      label: 📸 Screenshots or Screen Recordings
-      description: Drag and drop your images or video files directly into this box to upload them.
+      label: 📸 Screenshots / Screen Recordings
+      description: Drag and drop images or videos here to show us what happens.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: clean_flash
+    attributes:
+      label: 🧹 Confirmation
+      options:
+        - label: "I did a clean flash (wiped data) before installing v1.0."
+          required: true
